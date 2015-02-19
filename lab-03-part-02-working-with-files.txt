@@ -12,13 +12,13 @@ Follow the instructions line-by-line.
 [NO OUTPUT]
 ----------
 ==========
-2. Find out if mtec1002-lab-02 already exists (from the previous lab).  If it doesn't, go back to the previous lab and find the steps regarding downloading the lab materials.
+2. Find out if mtec1003-lab-03 already exists (from the previous lab).  If it doesn't, go back to the previous lab and find the steps regarding downloading the lab materials.
 
-(See steps 1-8 in http://foureyes.github.io/mtec1002-spring2014/labs/03/lab-03-part-02-working-with-files.txt)
+(See steps 1-8 in http://entertainmenttechnology.github.io/Wilson-MTEC1003/labs/03/lab-03-part-02-working-with-files.txt)
 [NO OUTPUT]
 ----------
 ==========
-3. Change your directory mtec1002-lab-03
+3. Change your directory mtec1003-lab-03
 [NO OUTPUT]
 ----------
 ==========
@@ -36,7 +36,10 @@ $ touch foo.txt
 $ ls
 Copy and paste the output below.
 ----------
-
+Users/student/mtec1003-lab-03/my_files
+ent-v321-009:my_files student$ ls
+foo.txt
+ent-v321-009:my_files student$ 
 
 
 ==========
@@ -44,7 +47,10 @@ Copy and paste the output below.
 
 $ touch bar.txt
 ----------
-
+ent-v321-009:my_files student$ touch bar.txt
+ent-v321-009:my_files student$ ls
+bar.txt	foo.txt
+ent-v321-009:my_files student$ 
 
 
 ==========
@@ -52,7 +58,10 @@ $ touch bar.txt
 
 Copy and paste the output below.
 ----------
-
+ent-v321-009:my_files student$ ls -l
+total 0
+-rw-r--r--  1 student  staff  0 Feb 18 20:04 bar.txt
+-rw-r--r--  1 student  staff  0 Feb 18 20:04 foo.txt
 
 
 ==========
@@ -61,7 +70,10 @@ Copy and paste the output below.
 
 Write the command that you used to copy the file.  Additionally, copy and paste the output of your file listing below.
 ----------
-
+ent-v321-009:my_files student$ cp -r bar.txt baz.txt
+ent-v321-009:my_files student$ ls
+bar.txt	baz.txt	foo.txt
+ent-v321-009:my_files student$ 
 
 
 ==========
@@ -69,6 +81,12 @@ Write the command that you used to copy the file.  Additionally, copy and paste 
 
 Write the command that you used to remove the file.  Copy and paste the output of your file listing below.
 ----------
+
+ent-v321-009:my_files student$ rm bar.txt
+ent-v321-009:my_files student$ ls
+baz.txt	foo.txt
+ent-v321-009:my_files student$ 
+
 ==========
 11. Move the file called foo.txt to qux.txt and then list the files again.
 
@@ -76,10 +94,13 @@ Write the command that you used to remove the file.  Copy and paste the output o
 Write the command that you used to move the file.  Copy and paste the output of your file listing below.
 ----------
 
-
+ent-v321-009:my_files student$ cp foo.txt qux.txt
+ent-v321-009:my_files student$ ls
+baz.txt	foo.txt	qux.txt
+ent-v321-009:my_files student$ 
 
 ==========
-12. Go up one directory so that you're in ~/mtec1002-lab-03.
+12. Go up one directory so that you're in ~/mtec1003-lab-03.
 [NO OUTPUT]
 ----------
 
@@ -91,7 +112,9 @@ Write the command that you used to move the file.  Copy and paste the output of 
 Write out the command that you used and what happened.
 ----------
 
-
+ent-v321-009:mtec1003-lab-03 student$ rmdir my_files
+rmdir: my_files: Directory not empty
+ent-v321-009:mtec1003-lab-03 student$ 
 
 ==========
 14. Try removing the directory called my_files using rm.
@@ -99,20 +122,26 @@ Write out the command that you used and what happened.
 Write out the command that you used and what happened.
 ----------
 
-
+(same Question as 13)
+ent-v321-009:mtec1003-lab-03 student$ rmdir my_files
+rmdir: my_files: Directory not empty
+ent-v321-009:mtec1003-lab-03 student$ 
 
 ==========
-15. MAKE SURE YOU'RE IN THE mtec1002-lab-03 directory!  
+15. MAKE SURE YOU'RE IN THE mtec1003-lab-03 directory!  
 
 Force the removal of the directory and files using the -rf flag
 
 $ rm -rf my_files
 ----------
 
-
+ent-v321-009:mtec1003-lab-03 student$ rm -rf my_files
+ent-v321-009:mtec1003-lab-03 student$ ls
+books	logs	web
+ent-v321-009:mtec1003-lab-03 student$ 
 
 ==========
-16. There's a txt file version of a book located in the mtec1002-lab-03 folder.  It is in the following directory if you're in the lab folder:
+16. There's a txt file version of a book located in the mtec1003-lab-03 folder.  It is in the following directory if you're in the lab folder:
 
 books/other/pg1232.txt
 
@@ -121,7 +150,7 @@ Use the command called cat on the file to show its contents.
 Describe what happened below.
 ----------
 
-
+I used cat books/other/pg1232.txt and it displayed the book that was in that file.
 
 ==========
 17. That was a lot of text.  Let's find ways to limit it.  Using the same file...
@@ -133,7 +162,7 @@ Use the command, head, on the file to show the contents of the beginning of the 
 Write the command that you used below.  Write the last line of the output below (it should be the title).
 ----------
 
-
+Title: The Prince
 
 ==========
 18. Using the same file again!
@@ -142,10 +171,10 @@ books/other/pg1232.txt
 
 Use tail on the file to show the contents of the end of the file.  
 
-Write the command that you used below.  Write the last line of the output below (it should be the title).
+Write the command that you used below.  Write the last line of the output below.
 ----------
 
-
+subscribe to our email newsletter to hear about new eBooks.
 
 ==========
 19. Using the same file...
@@ -157,7 +186,7 @@ Use less and more on the file to show the contents of the file.  Try pressing sp
 Write the command that you used below.  Describe what spacebar and q does after using either less or more.
 ----------
 
-
+I used less and more after books/other/pg1232.txt, [space] moves down the page and [q] exited.
 
 ==========
 20. Describe what situations you would use the following commands for viewing files: less, more, cat, tail, head
@@ -165,14 +194,31 @@ Write the command that you used below.  Describe what spacebar and q does after 
 (Some characteristics that may help your description might be the length of the file, whether or not you'd like to read the whole thing... or just the beginning or end, etc.)
 ----------
 
-
+-Less is used more for showing all the content of a certain file
+-more is to show a lesser part of the file or directory
+-cat Is exactly like less but doesn't give you the option to scroll up and down the txt.
+-tail shows the end of the txt or file.
+-head only shows the top of the txt or file.
 
 ==========
 21.  How many words are in pg1232.txt?  What command did you use to determine the word count?
 ----------
 
-
+ent-v321-009:mtec1003-lab-03 student$ wc books/other/pg1232.txt
+    5063   52639  305864 books/other/pg1232.txt
 
 ==========
 22.  How many lines are in pg1232.txt?  What command did you use to determine the line count?
 ----------
+I used wc
+
+==========
+OPTIONAL
+
+23.  Make sure you're in the books/other folder.  Copy all of the txt files from that folder to your home directory using wildcard matching.
+
+Write the command that you used below.
+----------
+
+cp *
+
